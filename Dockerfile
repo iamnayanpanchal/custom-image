@@ -1,8 +1,5 @@
 # syntax=docker/dockerfile:1
-   
-FROM node:18-alpine
-WORKDIR /app
-COPY . .
-RUN yarn install --production
-CMD ["node", "src/index.js"]
-EXPOSE 3000
+FROM ubuntu:18.04
+COPY . /app
+RUN make /app
+CMD python /app/app.py
