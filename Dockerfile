@@ -1,5 +1,7 @@
-# syntax=docker/dockerfile:1
-FROM ubuntu:18.04
-COPY . /app
-RUN make /app
-CMD python /app/app.py
+#This is a sample Image 
+FROM ubuntu 
+MAINTAINER demousr@gmail.com 
+
+RUN apt-get update 
+RUN apt-get install –y nginx 
+CMD [“echo”,”Image created”]
